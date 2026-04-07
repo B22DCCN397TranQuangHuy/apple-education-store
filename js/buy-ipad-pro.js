@@ -8,7 +8,6 @@
 /* ---- Section 4 > Gallery — dot nav & paddle nav ---- */
 // Chuyển ảnh khi click dot hoặc Prev/Next
 // TODO
-daddaasd;
 /* ---- Section 4 > Selection Steps — step unlock logic ---- */
 // Khi chọn xong Step N thì unlock Step N+1
 // Không cần hiệu ứng thay đổi giá hay ảnh khi chọn cấu hình
