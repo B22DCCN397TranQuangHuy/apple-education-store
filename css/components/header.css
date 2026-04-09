@@ -5,7 +5,142 @@
 /* ---- Segment Bar (Education Store indicator) ---- */
 /* .globalmessage-segment */
 /* TODO */
+/* ================================================================
+   header.css — Global navigation & segment bar
+   Dùng chung cho index.html và buy-ipad-pro.html
+   ================================================================ */
 
+/* =============================================
+   LỚP NGOÀI CÙNG
+   ============================================= */
+.global-header {
+  position: relative;
+  top: 0;
+  z-index: 9999;
+  height: auto;
+  background-color: #f0f0f2;
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: 400;
+}
+
+/* =============================================
+         <nav> BÊN TRONG
+         ============================================= */
+.global-nav {
+  height: 100%;
+  /* max-width: 1024px; */
+  margin: 0 auto;
+  /* padding: 0 16px; */
+}
+
+/* ---- Hàng trên (segment bar) ---- */
+.global-nav__top-list {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 18px;
+  list-style: none;
+  margin: auto;
+  padding: 0 0 0 16px;
+  border-bottom: none;
+  max-width: 1024px;
+}
+
+.global-nav__top-item {
+  display: flex;
+  align-items: center;
+}
+
+/* ---- Danh sách các mục nav chính ---- */
+.global-nav__list {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f7;
+  border: none;
+  margin: auto;
+  padding: 0 14rem;
+}
+
+/* ---- Từng mục nav ---- */
+.global-nav__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex: 1;
+}
+
+/* ---- Thẻ <a> bên trong mỗi mục ---- */
+.global-nav__link {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 4px;
+  transition: color 0.15s ease;
+}
+
+/* Giữ nav header không bị gạch chân khi hover */
+.global-nav__link:hover,
+.global-nav__item:hover .global-nav__link,
+.global-nav__link:focus,
+.global-nav__link:active {
+  text-decoration: none !important;
+}
+
+/* =============================================
+         LOGO APPLE
+         ============================================= */
+.global-nav__item--logo {
+  flex: 1;
+}
+
+.icon-apple {
+  width: 14px;
+  height: 17px;
+  fill: currentColor;
+  display: block;
+  transition: fill 0.15s ease;
+}
+
+/* =============================================
+         ICON SEARCH & BAG
+         ============================================= */
+.global-nav__item--icon {
+  flex: 0 0 auto;
+  width: 44px;
+}
+
+.icon-search {
+  width: 15px;
+  height: 15px;
+  fill: black;
+  display: block;
+  transition: fill 0.15s ease;
+}
+
+.icon-bag {
+  width: 15px;
+  height: 15px;
+  fill: black;
+  display: block;
+  transition: fill 0.15s ease;
+}
 /* ---- Global Nav Wrapper ---- */
 /* #globalnav */
 /* TODO */
