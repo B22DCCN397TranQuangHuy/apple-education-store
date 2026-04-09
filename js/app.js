@@ -4,7 +4,37 @@
    ================================================================ */
 
 /* ---- Global Nav: Mobile hamburger toggle ---- */
-// TODO
+const menuToggle = document.getElementById("menu-toggle");
+const mobileNav = document.getElementById("mobile-nav");
+const globalHeader = document.getElementById("globalheader");
+
+function openMobileMenu() {
+  if (!menuToggle || !mobileNav || !globalHeader) return;
+  if (searchPanel?.classList.contains("is-open")) closeSearch();
+  if (bagPanel?.classList.contains("is-open")) closeBag();
+  mobileNav.classList.add("is-open");
+  mobileNav.setAttribute("aria-hidden", "false");
+  menuToggle.setAttribute("aria-expanded", "true");
+  globalHeader.classList.add("is-menu-open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeMobileMenu() {
+  if (!menuToggle || !mobileNav || !globalHeader) return;
+  mobileNav.classList.remove("is-open");
+  mobileNav.setAttribute("aria-hidden", "true");
+  menuToggle.setAttribute("aria-expanded", "false");
+  globalHeader.classList.remove("is-menu-open");
+  document.body.style.overflow = "";
+}
+
+menuToggle?.addEventListener("click", () => {
+  mobileNav?.classList.contains("is-open") ? closeMobileMenu() : openMobileMenu();
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 768) closeMobileMenu();
+});
 
 /* ---- Global Nav: Flyout submenu hover/click ---- */
 // TODO
@@ -21,7 +51,9 @@ if (searchCancel) {
 }
 
 function openSearch() {
+  if (!searchPanel || !searchBackdrop || !searchToggle) return;
   // Hàm này có nhiệm vụ mở search panel.
+  if (mobileNav?.classList.contains("is-open")) closeMobileMenu();
   if (bagPanel?.classList.contains("is-open")) closeBag(); // Nếu bag panel đang mở, đóng nó trước
   searchPanel.classList.add("is-open"); // Thêm class is-open để hiện panel
   searchBackdrop.classList.add("is-open"); // Mở backdrop để che đi phần dưới
@@ -37,6 +69,7 @@ function syncCancelVisibility() {
 }
 
 function closeSearch() {
+  if (!searchPanel || !searchBackdrop || !searchToggle) return;
   searchPanel.classList.remove("is-open");
   searchBackdrop.classList.remove("is-open");
   searchPanel.setAttribute("aria-hidden", "true");
@@ -45,6 +78,7 @@ function closeSearch() {
 }
 
 searchToggle?.addEventListener("click", () => {
+  if (!searchPanel) return;
   searchPanel.classList.contains("is-open") ? closeSearch() : openSearch();
 });
 
@@ -52,12 +86,14 @@ searchCancel?.addEventListener("click", closeSearch);
 searchBackdrop?.addEventListener("click", () => {
   closeSearch();
   closeBag();
+  closeMobileMenu();
 });
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
-    if (searchPanel.classList.contains("is-open")) closeSearch();
+    if (searchPanel?.classList.contains("is-open")) closeSearch();
     if (bagPanel?.classList.contains("is-open")) closeBag();
+    if (mobileNav?.classList.contains("is-open")) closeMobileMenu();
   }
 });
 
@@ -66,7 +102,9 @@ const bagToggle = document.getElementById("bag-toggle");
 const bagPanel = document.getElementById("bag-panel");
 
 function openBag() {
-  if (searchPanel.classList.contains("is-open")) closeSearch();
+  if (!bagPanel || !searchBackdrop || !bagToggle) return;
+  if (mobileNav?.classList.contains("is-open")) closeMobileMenu();
+  if (searchPanel?.classList.contains("is-open")) closeSearch();
   bagPanel.classList.add("is-open");
   searchBackdrop.classList.add("is-open");
   bagPanel.setAttribute("aria-hidden", "false");
@@ -74,6 +112,7 @@ function openBag() {
 }
 
 function closeBag() {
+  if (!bagPanel || !searchBackdrop || !bagToggle) return;
   bagPanel.classList.remove("is-open");
   searchBackdrop.classList.remove("is-open");
   bagPanel.setAttribute("aria-hidden", "true");
@@ -81,14 +120,14 @@ function closeBag() {
 }
 
 bagToggle?.addEventListener("click", () => {
+  if (!bagPanel) return;
   bagPanel.classList.contains("is-open") ? closeBag() : openBag();
 });
 
 /* ---- Global Header: đóng panel khi chuột rời khỏi header ---- */
-const globalHeader = document.getElementById("globalheader");
 globalHeader?.addEventListener("mouseleave", () => {
-  if (searchPanel.classList.contains("is-open")) closeSearch();
-  if (bagPanel.classList.contains("is-open")) closeBag();
+  if (searchPanel?.classList.contains("is-open")) closeSearch();
+  if (bagPanel?.classList.contains("is-open")) closeBag();
 });
 
 /* ---- Section 3: Product Nav Shelf — horizontal drag/scroll ---- */
