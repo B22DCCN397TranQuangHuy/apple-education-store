@@ -61,6 +61,36 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
+/* ---- Global Nav: Bag toggle ---- */
+const bagToggle = document.getElementById("bag-toggle");
+const bagPanel = document.getElementById("bag-panel");
+
+function openBag() {
+  if (searchPanel.classList.contains("is-open")) closeSearch();
+  bagPanel.classList.add("is-open");
+  searchBackdrop.classList.add("is-open");
+  bagPanel.setAttribute("aria-hidden", "false");
+  bagToggle.setAttribute("aria-expanded", "true");
+}
+
+function closeBag() {
+  bagPanel.classList.remove("is-open");
+  searchBackdrop.classList.remove("is-open");
+  bagPanel.setAttribute("aria-hidden", "true");
+  bagToggle.setAttribute("aria-expanded", "false");
+}
+
+bagToggle?.addEventListener("click", () => {
+  bagPanel.classList.contains("is-open") ? closeBag() : openBag();
+});
+
+/* ---- Global Header: đóng panel khi chuột rời khỏi header ---- */
+const globalHeader = document.getElementById("globalheader");
+globalHeader?.addEventListener("mouseleave", () => {
+  if (searchPanel.classList.contains("is-open")) closeSearch();
+  if (bagPanel.classList.contains("is-open")) closeBag();
+});
+
 /* ---- Section 3: Product Nav Shelf — horizontal drag/scroll ---- */
 // TODO
 

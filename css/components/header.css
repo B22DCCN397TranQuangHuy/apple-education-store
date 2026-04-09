@@ -426,3 +426,137 @@
 .bag-panel__profile-item:hover a {
   color: #000;
 }
+
+/* =============================================
+     HAMBURGER / MOBILE NAV — ẩn mặc định trên desktop
+     ============================================= */
+.global-nav__item--menu {
+  display: none;
+}
+
+.global-nav__menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  width: 44px;
+  color: inherit;
+}
+
+.icon-close {
+  display: none;
+}
+
+.global-nav__menu-btn[aria-expanded="true"] .icon-menu {
+  display: none;
+}
+
+.global-nav__menu-btn[aria-expanded="true"] .icon-close {
+  display: block;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+/* =============================================
+     RESPONSIVE — max-width: 768px
+     ============================================= */
+@media (max-width: 768px) {
+  /* ---- Segment bar: giữ hiển thị, giảm padding ---- */
+  .global-nav__top-list {
+    display: flex;
+    padding: 0 12px;
+    font-size: 11px;
+  }
+
+  /* ---- Nav bar chính ---- */
+  .global-nav__list {
+    padding: 0 4px;
+  }
+
+  /* Ẩn tất cả text nav items */
+  .global-nav__item:not(.global-nav__item--logo):not(
+      .global-nav__item--icon
+    ):not(.global-nav__item--menu) {
+    display: none;
+  }
+
+  /* Logo bên trái, đẩy các item còn lại sang phải */
+  .global-nav__item--logo {
+    flex: 1;
+    justify-content: flex-start;
+    padding-left: 8px;
+  }
+
+  /* Search & bag */
+  .global-nav__item--icon {
+    flex: 0 0 44px;
+  }
+
+  /* Hamburger bên phải nhất */
+  .global-nav__item--menu {
+    display: flex;
+    flex: 0 0 44px;
+    order: 99;
+  }
+
+  /* ---- Search panel trên mobile ---- */
+  .search-panel__inner {
+    padding: 1.25rem 1rem 2rem;
+  }
+
+  .search-panel__input {
+    font-size: 18px;
+  }
+
+  /* ---- Bag panel trên mobile ---- */
+  .bag-panel__inner {
+    padding: 1.25rem 1rem 1.5rem;
+  }
+
+  /* ---- Mobile nav drawer ---- */
+  .mobile-nav {
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    background: #fff;
+    border-top: 1px solid #e8e8ed;
+    transition: max-height 0.42s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mobile-nav.is-open {
+    max-height: 520px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-nav__list {
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0 1rem;
+  }
+
+  .mobile-nav__link {
+    display: block;
+    padding: 0.7rem 1.25rem;
+    font-size: 17px;
+    font-weight: 400;
+    color: #1d1d1f;
+    text-decoration: none;
+    letter-spacing: -0.01em;
+    border-bottom: 1px solid #f0f0f2;
+    transition: background-color 0.15s ease;
+  }
+
+  .mobile-nav__link:last-of-type {
+    border-bottom: none;
+  }
+
+  .mobile-nav__link:hover {
+    background-color: #f5f5f7;
+  }
+}
