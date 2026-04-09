@@ -428,8 +428,8 @@
 }
 
 /* =============================================
-     HAMBURGER / MOBILE NAV — ẩn mặc định trên desktop
-     ============================================= */
+       HAMBURGER / MOBILE NAV — ẩn mặc định trên desktop
+       ============================================= */
 .global-nav__item--menu {
   display: none;
 }
@@ -464,8 +464,8 @@
 }
 
 /* =============================================
-     RESPONSIVE — max-width: 768px
-     ============================================= */
+       RESPONSIVE — max-width: 768px
+       ============================================= */
 @media (max-width: 768px) {
   /* ---- Segment bar: giữ hiển thị, giảm padding ---- */
   .global-nav__top-list {

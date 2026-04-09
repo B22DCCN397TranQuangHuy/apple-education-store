@@ -1,8 +1,8 @@
-/* ================================================================
-   edu-store.css — Page-specific styles for index.html
-   (Trang Cửa Hàng Giáo Dục Apple)
-   ================================================================ */
-
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f7;
+}
 /* ---- Section 2: Store Hero ---- */
 
 .section-hero {
@@ -101,9 +101,9 @@
   padding-left: 90px;
   margin-top: 40px;
   margin-bottom: 40px;
-  display: flex;            /* các item nằm ngang */
-  gap: 40px;               /* Khoảng cách giữa các item */
-  overflow-x: auto;        /* Hỗ trợ lướt trên điện thoại */
+  display: flex; /* các item nằm ngang */
+  gap: 40px; /* Khoảng cách giữa các item */
+  overflow-x: auto; /* Hỗ trợ lướt trên điện thoại */
 }
 
 @media (max-width: 734px) {
@@ -114,7 +114,7 @@
     margin-bottom: 32px;
     gap: 20px;
   }
-  
+
   .detail {
     font-size: 12px;
   }
@@ -127,31 +127,31 @@
 
 .item {
   display: flex;
-  flex-direction: column;  /* Các item nằm dọc*/
-  align-items: center;     /* Căn giữa ảnh và chữ theo chiều dọc */
-  min-width: 100px;        /* tránh co khi scroll*/
+  flex-direction: column; /* Các item nằm dọc*/
+  align-items: center; /* Căn giữa ảnh và chữ theo chiều dọc */
+  min-width: 100px; /* tránh co khi scroll*/
   cursor: pointer; /* Khi hover sẽ có hiệu ứng pointer */
 }
 
 .Item-list img {
-  width: auto;             /* Để ảnh tự nhảy theo tỷ lệ */
-  height: 62px;            /* Chiều cao cố định*/
-  object-fit: contain;     /* Giữ nguyên tỷ lệ ảnh fit vào khung */
-  margin-bottom: 15px;     /* Khoảng cách giữa ảnh và chữ */
+  width: auto; /* Để ảnh tự nhảy theo tỷ lệ */
+  height: 62px; /* Chiều cao cố định*/
+  object-fit: contain; /* Giữ nguyên tỷ lệ ảnh fit vào khung */
+  margin-bottom: 15px; /* Khoảng cách giữa ảnh và chữ */
   transition: transform 0.3s ease; /*hiệu ứng mượt hơn*/
 }
 
 .item:hover img {
-  transform: scale(1.05);  /* phóng to 105% khi di chuột */
+  transform: scale(1.05); /* phóng to 105% khi di chuột */
 }
 
 .detail {
-  font-size: 13px;         
+  font-size: 13px;
   font-weight: 600;
   color: #1d1d1f;
   margin: 0;
   text-align: center;
-  white-space: nowrap;     /* Không cho chữ xuống dòng */
+  white-space: nowrap; /* Không cho chữ xuống dòng */
 }
 /* ---- Section 4: Trợ Giá Cho Giáo Dục ---- */
 /* .section-edu-savings */
