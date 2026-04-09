@@ -12,7 +12,62 @@
 /* .section-product-nav */
 /* .rs-productnav-cardsshelf, .rf-productnav-card */
 /* TODO */
+.Item-list {
+  padding-left: 90px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;            /* các item nằm ngang */
+  gap: 40px;               /* Khoảng cách giữa các item */
+  overflow-x: auto;        /* Hỗ trợ lướt trên điện thoại */
+}
 
+@media (max-width: 734px) {
+  .Item-list {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    gap: 20px;
+  }
+  
+  .detail {
+    font-size: 12px;
+  }
+}
+
+/* Ẩn thanh scroll bar */
+.Item-list::-webkit-scrollbar {
+  display: none;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;  /* Các item nằm dọc*/
+  align-items: center;     /* Căn giữa ảnh và chữ theo chiều dọc */
+  min-width: 100px;        /* tránh co khi scroll*/
+  cursor: pointer; /* Khi hover sẽ có hiệu ứng pointer */
+}
+
+.Item-list img {
+  width: auto;             /* Để ảnh tự nhảy theo tỷ lệ */
+  height: 62px;            /* Chiều cao cố định*/
+  object-fit: contain;     /* Giữ nguyên tỷ lệ ảnh fit vào khung */
+  margin-bottom: 15px;     /* Khoảng cách giữa ảnh và chữ */
+  transition: transform 0.3s ease; /*hiệu ứng mượt hơn*/
+}
+
+.item:hover img {
+  transform: scale(1.05);  /* phóng to 105% khi di chuột */
+}
+
+.detail {
+  font-size: 13px;         
+  font-weight: 600;
+  color: #1d1d1f;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;     /* Không cho chữ xuống dòng */
+}
 /* ---- Section 4: Trợ Giá Cho Giáo Dục ---- */
 /* .section-edu-savings */
 /* .rs-cards-shelf-mainheader, .rs-cards-shelf-secondaryheader */
