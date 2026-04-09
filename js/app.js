@@ -61,6 +61,36 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
+/* ---- Global Nav: Bag toggle ---- */
+const bagToggle = document.getElementById("bag-toggle");
+const bagPanel = document.getElementById("bag-panel");
+
+function openBag() {
+  if (searchPanel.classList.contains("is-open")) closeSearch();
+  bagPanel.classList.add("is-open");
+  searchBackdrop.classList.add("is-open");
+  bagPanel.setAttribute("aria-hidden", "false");
+  bagToggle.setAttribute("aria-expanded", "true");
+}
+
+function closeBag() {
+  bagPanel.classList.remove("is-open");
+  searchBackdrop.classList.remove("is-open");
+  bagPanel.setAttribute("aria-hidden", "true");
+  bagToggle.setAttribute("aria-expanded", "false");
+}
+
+bagToggle?.addEventListener("click", () => {
+  bagPanel.classList.contains("is-open") ? closeBag() : openBag();
+});
+
+/* ---- Global Header: đóng panel khi chuột rời khỏi header ---- */
+const globalHeader = document.getElementById("globalheader");
+globalHeader?.addEventListener("mouseleave", () => {
+  if (searchPanel.classList.contains("is-open")) closeSearch();
+  if (bagPanel.classList.contains("is-open")) closeBag();
+});
+
 /* ---- Section 3: Product Nav Shelf — horizontal drag/scroll ---- */
 // TODO
 
@@ -72,3 +102,42 @@ document.addEventListener("keydown", (e) => {
 
 /* ---- Smooth scroll & anchor links ---- */
 // TODO
+const container = document.querySelector(".scroll-content");
+const leftArrow = document.querySelector(".arrow.left");
+const rightArrow = document.querySelector(".arrow.right");
+
+function updateArrows() {
+  const scrollLeft = container.scrollLeft;
+  const maxScroll = container.scrollWidth - container.clientWidth;
+
+  // Ẩn hiện arrow
+  if (scrollLeft <= 0) {
+    leftArrow.style.opacity = "0";
+    leftArrow.style.pointerEvents = "none";
+  } else {
+    leftArrow.style.opacity = "1";
+    leftArrow.style.pointerEvents = "auto";
+  }
+
+  if (scrollLeft >= maxScroll - 1) {
+    rightArrow.style.opacity = "0";
+    rightArrow.style.pointerEvents = "none";
+  } else {
+    rightArrow.style.opacity = "1";
+    rightArrow.style.pointerEvents = "auto";
+  }
+}
+
+// chạy khi scroll
+container.addEventListener("scroll", updateArrows);
+
+// chạy lần đầu khi load
+updateArrows();
+
+leftArrow.addEventListener("click", () => {
+  container.scrollBy({ left: -400, behavior: "smooth" });
+});
+
+rightArrow.addEventListener("click", () => {
+  container.scrollBy({ left: 400, behavior: "smooth" });
+});
