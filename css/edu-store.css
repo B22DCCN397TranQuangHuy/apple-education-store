@@ -27,7 +27,7 @@ body {
   line-height: 1.05;
   letter-spacing: -1.2px;
   flex: 1;
-  padding-right: 40rem;
+  padding-right: 15rem;
 }
 
 .section-hero__aside {
@@ -167,7 +167,7 @@ body {
   font-size: 28px;
   font-weight: 600;
 
-  padding-left:90px;
+  padding-left: 90px;
 }
 
 @media (max-width: 734px) {
@@ -193,9 +193,8 @@ body {
   }
 }
 .scroll-container {
-   margin :0;
-   position:relative;
-   
+  margin: 0;
+  position: relative;
 }
 .scroll-content {
   display: flex;
@@ -204,7 +203,7 @@ body {
   scroll-behavior: smooth;
 
   /* 1. Use padding here to create the 'start' and 'end' space */
-  padding-left: 90px; 
+  padding-left: 90px;
   padding-right: 70px;
 }
 
@@ -216,7 +215,7 @@ body {
 }
 
 .scroll-content::-webkit-scrollbar {
-  display: none;               /*no scrollbar*/
+  display: none; /*no scrollbar*/
 }
 .card {
   width: 400px;
@@ -228,7 +227,6 @@ body {
 
   position: relative;
   overflow: hidden;
-  
 }
 
 .arrow {
@@ -238,7 +236,7 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  
+
   border: none;
   background: rgba(200, 200, 200, 0.6);
   color: #333;
@@ -270,44 +268,44 @@ body {
 
 .title {
   margin: 0;
-  font-size: 27px;   
+  font-size: 27px;
   font-weight: 600;
 }
-.title-white{
-   margin: 0;
-  font-size: 27px;   
+.title-white {
+  margin: 0;
+  font-size: 27px;
   font-weight: 600;
   color: antiquewhite;
 }
 .subtitle {
   margin: 0;
-  font-size: 17px;   
+  font-size: 17px;
   font-weight: 600;
   padding-top: 10px;
 }
 .subtitle-white {
   margin: 0;
-  font-size: 17px;   
+  font-size: 17px;
   font-weight: 600;
   padding-top: 10px;
   color: antiquewhite;
 }
-.price{
-   margin: 0;
-  font-size: 15px;   
+.price {
+  margin: 0;
+  font-size: 15px;
   font-weight: 200;
   padding-top: 10px;
 }
-.price-white{
-   margin: 0;
-  font-size: 15px;   
+.price-white {
+  margin: 0;
+  font-size: 15px;
   font-weight: 200;
   padding-top: 10px;
   color: antiquewhite;
 }
-.special{
+.special {
   margin: 0;
-  font-size: 30px;   
+  font-size: 30px;
   font-weight: 600;
   padding-top: 30px;
 }
