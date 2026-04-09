@@ -279,9 +279,34 @@
       HTML/CSS (FE-2.5): tiêu đề, field Họ tên + Số điện thoại, nút "Gửi Thông Tin".
       JS Validate (FE-2.6): không rỗng, số điện thoại 10 chữ số bắt đầu bằng 0.
     ─────────────────────────────────────────────────────────────────────── -->
-    <section id="section-customer-form" class="section-customer-form">
-      <!-- TODO: .customer-form > .form-group (label + input + .error-message) -->
-    </section>
+      <section class="section-form">
+          <div class="section-form__inner">
+              <div class="section-form__header">
+                  <h2 class="form-title">THÔNG TIN CÁ NHÂN</h2>
+                  <p class="form-desc">Hãy để lại thông tin nếu bạn quan tâm đến sản phẩm của chúng tôi.</p>
+              </div>
+              <form class="form-content">
+                  <div id="customer-name" class="form-field">
+                      <label>
+                          Họ và tên
+                          <input type="text" placeholder="Nguyễn Văn A" required/>
+                      </label>
+                      <span class="form-error-message">Vui lòng nhập họ và tên</span>
+                  </div>
+                  <div id="customer-tel" class="form-field">
+                      <label>
+                          Số điện thoại
+                          <input type="tel" placeholder="0123456789" pattern="[0-9]{10}" required/>
+                      </label>
+                      <span class="form-error-message">Số điện thoại không hợp lệ</span>
+                  </div>
+                  <button id="customer-btn" class="form-submit-btn">Gửi thông tin</button>
+                  <div id="customer-success" class="form-success-message">
+                      Thông tin của bạn đã được ghi nhận.
+                  </div>
+              </form>
+          </div>
+      </section>
 
     <!-- ── FE-2.7: CÂU HỎI THƯỜNG GẶP ────────────────────────────────
       Accordion "Câu Hỏi Thường Gặp" với 5 câu hỏi lồng nhau:
