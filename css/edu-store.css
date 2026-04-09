@@ -158,6 +158,194 @@ body {
 /* .rs-cards-shelf-mainheader, .rs-cards-shelf-secondaryheader */
 /* .rf-ccard-40, badge ưu đãi giáo dục SVG */
 /* TODO */
+.section-edu-savings {
+  padding: 0;
+  margin-top: 40px;
+}
+
+.text-1 {
+  font-size: 28px;
+  font-weight: 600;
+
+  padding-left:90px;
+}
+
+@media (max-width: 734px) {
+  .text-1 {
+    font-size: 22px;
+    padding-left: 16px;
+    display: block;
+    margin-bottom: 8px;
+  }
+}
+
+.text-2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: grey;
+}
+
+@media (max-width: 734px) {
+  .text-2 {
+    font-size: 15px;
+    padding-left: 16px;
+    display: block;
+  }
+}
+.scroll-container {
+   margin :0;
+   position:relative;
+   
+}
+.scroll-content {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+
+  /* 1. Use padding here to create the 'start' and 'end' space */
+  padding-left: 90px; 
+  padding-right: 70px;
+}
+
+@media (max-width: 734px) {
+  .scroll-content {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.scroll-content::-webkit-scrollbar {
+  display: none;               /*no scrollbar*/
+}
+.card {
+  width: 400px;
+  height: 500px;
+
+  flex-shrink: 0; /* the item won't shrink when container is too small */
+  background: #eee;
+  border-radius: 20px;
+
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  
+  border: none;
+  background: rgba(200, 200, 200, 0.6);
+  color: #333;
+  font-size: 24px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s;
+  z-index: 5;
+}
+
+/* Hover effect: when clicked its color is different */
+.arrow:hover {
+  background: rgba(150, 150, 150, 0.8);
+}
+
+/* Left arrow */
+.arrow.left {
+  left: 10px;
+}
+
+/* Right arrow */
+.arrow.right {
+  right: 10px;
+}
+
+.title {
+  margin: 0;
+  font-size: 27px;   
+  font-weight: 600;
+}
+.title-white{
+   margin: 0;
+  font-size: 27px;   
+  font-weight: 600;
+  color: antiquewhite;
+}
+.subtitle {
+  margin: 0;
+  font-size: 17px;   
+  font-weight: 600;
+  padding-top: 10px;
+}
+.subtitle-white {
+  margin: 0;
+  font-size: 17px;   
+  font-weight: 600;
+  padding-top: 10px;
+  color: antiquewhite;
+}
+.price{
+   margin: 0;
+  font-size: 15px;   
+  font-weight: 200;
+  padding-top: 10px;
+}
+.price-white{
+   margin: 0;
+  font-size: 15px;   
+  font-weight: 200;
+  padding-top: 10px;
+  color: antiquewhite;
+}
+.special{
+  margin: 0;
+  font-size: 30px;   
+  font-weight: 600;
+  padding-top: 30px;
+}
+
+.card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  z-index: 1;
+}
+
+.card-text {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+
+  z-index: 2;
+}
+
+.edu-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  z-index: 3;
+}
+
+/* Chỉnh kích thước icon nếu cần */
+.edu-badge svg {
+  width: 26px;
+  height: 26px;
+}
 
 /* ---- Section 5: Apple Store Tạo Nên Mọi Khác Biệt ---- */
 /* .section-store-highlights */
