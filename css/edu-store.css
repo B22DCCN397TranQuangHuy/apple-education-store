@@ -353,7 +353,153 @@ body {
 /* màu nền: teal, dodger-blue, green, blue-violet, fire-dodger */
 /* icon SVG lớn phía trên text */
 /* TODO */
+.cardsshelf-header-container {
+  font-size: 28px;
+  font-weight: 600;
+  color: rgb(29, 29, 31);
+  text-align: left;
+  margin-bottom: 0.5rem;
+  margin-left: 5rem;
+}
 
+@media (max-width: 734px) {
+  .cardsshelf-header-container {
+    font-size: 22px;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.cardsshelf-header-first {
+  color: rgb(29, 29, 31);
+}
+
+@media (max-width: 734px) {
+  .cardsshelf-header-first {
+    font-size: 22px;
+    padding-left: 16px;
+    display: block;
+  }
+}
+
+.cardsshelf-header-second {
+  color: #6e6e73;
+}
+
+@media (max-width: 734px) {
+  .cardsshelf-header-second {
+    font-size: 22px;
+    display: block;
+  }
+}
+
+.section-square-card {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-right: 5rem;
+  padding: 2rem 5rem;
+}
+
+@media (max-width: 734px) {
+  .section-square-card {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-right: 1rem;
+    padding: 1.5rem;
+  }
+}
+
+.square-card-list {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 0.75rem 5rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Ẩn scrollbar */
+.square-card-list::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 734px) {
+  .square-card-list {
+    padding: 0.75rem;
+    gap: 1rem;
+  }
+}
+
+.square-card-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.square-card-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 21rem;
+  padding: 1rem 1.75rem;
+  background-color: #fff;
+  padding-bottom: 4rem;
+  line-height: 1.2;
+  height: 14rem;
+  cursor: pointer; /* khi hover sẽ có hiệu ứng pointer */
+  background-color: #fff;
+  border-radius: 18px;
+  box-shadow: 2px 4px 12px #00000014;
+  &:hover {
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+    transform: scale(1.009);
+  }
+  transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
+  white-space: normal;
+}
+
+.square-card-item-icon {
+  width: 46px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(8, 130, 124);
+}
+.square-card-item-header {
+  font-size: 24px;
+  font-weight: 600;
+  color: rgb(29, 29, 31);
+}
+.dd-highlight {
+  color: rgb(8, 130, 124);
+}
+
+@media (max-width: 734px) {
+  .square-card-item {
+    width: 16rem;
+    height: 13rem;
+    padding: 1rem 0.875rem;
+    padding-bottom: 1rem;
+  }
+  
+  .square-card-item-header {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+  
+  .square-card-item-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+  }
+}
 /* ---- Section 6: Tiềm Năng Vô Tận ---- */
 /* .section-edu-potential */
 /* .rf-ccard-40 + eyebrow label (.rf-ccard-content-header-eyebrow) */
