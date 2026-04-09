@@ -141,6 +141,167 @@
   display: block;
   transition: fill 0.15s ease;
 }
+
+/* =============================================
+     SEARCH PANEL (slide-down)
+     ============================================= */
+.search-panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  max-height: 0;
+  background: #fff;
+  border-top: none;
+  z-index: 9998;
+  transition: max-height 0.42s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.search-panel.is-open {
+  max-height: 340px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+}
+
+.search-panel__inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 2.5rem;
+}
+
+/* ---- Input row ---- */
+.search-panel__input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: transparent;
+  border-radius: 0;
+  padding: 0 0 0.875rem 0;
+  margin-bottom: 1.5rem;
+  border-bottom: none;
+  background-color: transparent;
+}
+
+.search-panel__icon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  fill: #6e6e73;
+}
+
+.search-panel__input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  font-family: inherit;
+  outline: none;
+  color: #1d1d1f;
+  font-weight: 600;
+  min-width: 0;
+}
+
+.search-panel__input::placeholder {
+  color: #6e6e73;
+}
+
+.panel__input:hover {
+  text-decoration: none;
+  border: none;
+}
+
+.search-panel__input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.search-panel__cancel {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-family: inherit;
+  color: #0071e3;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 0;
+  letter-spacing: -0.01em;
+}
+
+.search-panel__cancel:hover {
+  text-decoration: underline;
+}
+
+/* ---- Quick links ---- */
+.search-panel__suggestions-title {
+  font-size: 12px;
+  font-weight: 400px;
+  color: rgb(110, 110, 115);
+  letter-spacing: -0.12px;
+  margin-bottom: 0.75rem;
+  line-height: 16px;
+}
+
+.search-panel__suggestions-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.search-panel__suggestions-list a {
+  font-size: 14px;
+  color: #1d1d1f;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.search-panel__suggestions-list li:hover {
+  background-color: #f0f0f2;
+}
+
+.search-panel__suggestions-list a::before {
+  content: "→";
+  color: #7b7b83;
+  font-size: 13px;
+}
+
+.search-panel__suggestions-list a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Khi hover cả dòng <li>, đổi cả chữ và mũi tên sang đen */
+.search-panel__suggestions-list li:hover a {
+  color: #000;
+  text-decoration: none;
+}
+
+.search-panel__suggestions-list li:hover a::before {
+  color: #000;
+  text-decoration: none;
+}
+
+/* =============================================
+         SEARCH BACKDROP
+         ============================================= */
+.search-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.48);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 9998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.search-backdrop.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
 /* ---- Global Nav Wrapper ---- */
 /* #globalnav */
 /* TODO */
