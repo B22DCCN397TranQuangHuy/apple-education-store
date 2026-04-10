@@ -26,6 +26,18 @@
     gap: 2rem;
 }
 
+@media (max-width: 600px) {
+    .section-form__inner {
+        flex-direction: column;
+        padding: 4rem 1rem;
+        gap: 1rem;
+    }
+
+    .section-form__header {
+        width: 100%;
+    }
+}
+
 /* ---- Header ---- */
 .form-title {
     height: 20%;
@@ -38,6 +50,16 @@
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;
+}
+
+@media (max-width: 600px) {
+    .form-title {
+        justify-content: center;
+    }
+
+    .form-desc {
+        padding: 0 2rem;
+    }
 }
 
 /* ---- Form layout ---- */
@@ -57,6 +79,12 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+}
+
+@media (max-width: 600px) {
+    .form-content {
+        padding: 1rem;
+    }
 }
 
 /* ---- Labels ---- */
@@ -85,6 +113,12 @@
 
 .form-field input.error {
     border-color: #ff3b30;
+}
+
+@media (max-width: 600px) {
+    .form-field input[type="text"], .form-field input[type="tel"] {
+        width: 15rem;
+    }
 }
 
 /* ---- Checkbox (optional) ---- */
