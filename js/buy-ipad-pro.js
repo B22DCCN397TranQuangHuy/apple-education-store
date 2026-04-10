@@ -37,8 +37,47 @@
 // TODO
 
 /* ---- Section 7: FAQ — accordion expand/collapse ---- */
-// Click tiêu đề -> toggle nội dung, animate chevron
-// TODO
+document.addEventListener("DOMContentLoaded", () => {
+
+
+  const faqList = document.getElementById('faqList');
+  const toggleAllBtn = document.getElementById('faqToggleAll');
+  const faqItems = document.querySelectorAll('.faq-item');
+
+
+  // Chức năng mũi tên to
+  if (toggleAllBtn && faqList) {
+    toggleAllBtn.addEventListener('click', () => {
+     
+      const isCollapsed = faqList.classList.contains('collapsed');
+      if (isCollapsed) {
+        faqList.classList.remove('collapsed');
+        toggleAllBtn.classList.add('open');
+      } else {
+        faqList.classList.add('collapsed');
+        toggleAllBtn.classList.remove('open');
+      }
+    });
+  } else {
+  }
+
+
+  // Chức năng mũi tên nhỏ
+  if (faqItems.length > 0) {
+    faqItems.forEach((item) => {
+      const btn = item.querySelector('.faq-question');
+      if (btn) {
+        btn.addEventListener('click', () => {
+          item.classList.toggle('open');
+        });
+      }
+    });
+  }
+});
+
+
+
+
 
 /* ---- Section 8: Sticky Chat — show after scroll down ---- */
 // Hiện nút chat sau khi cuộn qua một ngưỡng nhất định
