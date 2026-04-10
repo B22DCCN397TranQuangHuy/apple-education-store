@@ -606,13 +606,37 @@ function initBuyFlow() {
   syncAllPrices();
 }
 
-
 /* ---- Section 5: Customer Form — validation & submit ---- */
 // - Validate Họ tên: không rỗng
 // - Validate Số điện thoại: 10 chữ số, bắt đầu bằng 0
 // - Hiển thị error message inline nếu sai
 // - Khi hợp lệ: hiện thông báo thành công (chưa cần gọi API)
-// TODO
+{
+  const nameDiv = document.getElementById('customer-name'), telDiv = document.getElementById('customer-tel');
+  const button = document.getElementById('customer-btn');
+  const successMsg = document.getElementById('customer-success');
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
+    const customerName = validateDiv(nameDiv), customerTel = validateDiv(telDiv);
+    successMsg.classList.remove('visible');
+    if (customerName && customerTel) {
+      console.log(`Fullname: ${customerName}, telephone: ${customerTel}`);
+      successMsg.classList.add('visible');
+    }
+  });
+}
+
+const validateDiv = (fieldDiv) => {
+  const input = fieldDiv.children[0].children[0];
+  if (input.validity.valid) {
+    input.classList.remove('error');
+    fieldDiv.children[1].classList.remove('visible');
+    return input.value;
+  }
+  input.classList.add('error');
+  fieldDiv.children[1].classList.add('visible');
+  return null;
+};
 
 /* ---- Section 7: FAQ — accordion expand/collapse ---- */
 document.addEventListener("DOMContentLoaded", () => {
