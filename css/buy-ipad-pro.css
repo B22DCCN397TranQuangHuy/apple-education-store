@@ -1,320 +1,9 @@
-/* ================================================================
-   buy-ipad-pro.css — Page-specific styles for buy-ipad-pro.html
-   (Trang Mua iPad Pro với ưu đãi Giáo Dục)
-   ================================================================ */
-
-/* ---- SECTION 2: Sticky Bar ---- */
-/* .rf-bfe-stickybar */
-/* TODO */
-
-/* ---- SECTION 3: BFE Header ---- */
-/* .rf-bfe-header-wrapper */
-/* .rf-bfe-header */
-/* .rf-bfe-header-price-wrapper */
-/* .rf-bfe-header-savingsmessage  (Education discount badge) */
-/* .rf-bfe-header-rightsection  (Trade-in link) */
-/* TODO */
-
-/* ---- SECTION 4: BFE Main — 2-column layout ---- */
-/* .rf-bfe-main */
-/* .rf-bfe-column-left  (gallery) */
-/* .rf-bfe-column-right  (selection steps) */
-/* TODO */
-
-/* ---- SECTION 4 > Gallery ---- */
-/* .rf-bfe-gallery-container */
-/* .rf-bfe-gallery-wrapper */
-/* .rc-inline-gallery */
-/* .rc-gallery-dotnav  (dot indicators) */
-/* .rc-gallery-paddlenav  (Prev/Next arrows) */
-/* TODO */
-
-/* ---- SECTION 4 > Selection Steps ---- */
-/* .rf-bfe-step  (chung cho tất cả steps) */
-/* .rf-bfe-dimension-header  (tiêu đề từng step, eyebrow typography) */
-/* .rf-bfe-step-disabled  (step bị khoá chờ step trước) */
-/* .rc-dimension-selector-group */
-/* .rc-dimension-selector-row  (mỗi option) */
-/* .form-selector-input  (radio hidden) */
-/* .form-selector-label  (label hiển thị) */
-/* .rf-bfe-selector-left-col  (tên option + mô tả) */
-/* .rf-bfe-selector-right-col  (giá) */
-/* .rc-decisionsection  (help link bên dưới step) */
-/* TODO */
-
-/* ---- SECTION 4 > Step 2: Color swatch ---- */
-/* .colornav  (color picker) */
-/* .colornav-item */
-/* .colornav-swatch  (ảnh tròn màu) */
-/* .colornav-label */
-/* TODO */
-
-/* ---- SECTION 4 > Step 6: Engraving ---- */
-/* .rf-engraving */
-/* .rf-engraving-tileoption-input */
-/* .rf-engraving-tileoption-right-col  ("Miễn Phí") */
-/* TODO */
-
-/* ---- SECTION 4 > Step 7: Accessories (Pencil / Keyboard) ---- */
-/* .rf-inlineaccessorylot */
-/* .rf-accessory-inline-evolution */
-/* .rf-accessory-inline-price */
-/* .rf-accessory-tile-badge  ("Khắc Miễn Phí") */
-/* TODO */
-
-/* ---- SECTION 4 > Step 9: Trade In ---- */
-/* .rf-tradeupbanner */
-/* .rf-tradeupbanner-tileoptions */
-/* TODO */
-
-/* ---- SECTION 4 > Step 10: AppleCare+ ---- */
-/* .rf-applecare-section */
-/* .rf-applecare-column-left */
-/* .rf-applecare-column-right */
-/* .rf-applecare-savingsmessage  (Education badge) */
-/* TODO */
-
-/* ---- SECTION 4 > Summary Box ---- */
-/* .rf-bfe-summary */
-/* .rf-bfe-summary-producttitle */
-/* .rf-bfe-summary-price */
-/* .rf-bfe-summary-button-box */
-/* .rc-summary-button  (nút "Tiếp tục") */
-/* .rc-favorite  (nút yêu thích hình trái tim) */
-/* TODO */
-
-/* ---- SECTION 4 > Progress Scrollbar ---- */
-/* .rf-bfe-progress-scrollbar  (thanh tiến độ bên phải ngoài màn hình) */
-/* TODO */
-
-/* ---- SECTION 5: Customer Form (bổ sung) ---- */
-/* .section-customer-form */
-/* .customer-form-title */
-/* .customer-form-desc */
-/* .customer-form */
-/* .form-group */
-/* .form-group label */
-/* .form-group input */
-/* .form-group .error-message */
-/* .form-submit-btn */
-/* .form-success-message */
-/* TODO */
-
-/* ---- SECTION 6: Trong hộp có gì ---- */
-/* .section-witb */
-/* .rf-flagship-buyflow-witb */
-/* .rf-flagship-buyflow-witbheader */
-/* .rc-witb-items  (ul flex row) */
-/* .rc-witb-item */
-/* .rc-witb-image-wrapper */
-/* .rc-witb-item-image */
-/* .rc-witb-item-label */
-/* TODO */
-
-/* ---- SECTION 7: FAQ ---- */
-/* .section-faq */
-/* .rf-bfe-community  (wrapper accordion) */
-/* .rc-accordion */
-/* .rc-accordion-item */
-/* .rc-accordion-button */
-/* .rc-accordion-title */
-/* .rc-accordion-collapse-icon */
-/* .rc-accordion-content */
-/* TODO */
-
-/* ---- SECTION 8: Sticky Chat Button ---- */
-/* .rs-sticky-chat  (fixed position, bottom-right) */
-/* .rc-chat-sticky */
-/* .rc-chaticon-button */
-/* .as-chat-buyflow-container */
-/* TODO */
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 768px) {
- 
-  /* 1. THU GỌN KHOẢNG CÁCH CHUNG */
-  /* Trên điện thoại, khoảng trống (padding) quá lớn sẽ làm mất diện tích, ta cần thu nhỏ lại */
-  .compare-section,
-  .creator-studio-section,
-  .faq-section {
-    padding: 40px 16px;
-  }
- 
-  .compare-section h2,
-  .faq-header h2 {
-    font-size: 28px; /* Thu nhỏ tiêu đề cho vừa màn hình */
-  }
-
-
-  /* 2. SỬA PHẦN CREATOR STUDIO */
-  /* Chuyển từ xếp 2 cột ngang sang xếp dọc (chữ ở trên, ảnh ở dưới) */
-  .creator-studio-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 30px;
-  }
-
-
-  .cs-text-col {
-    max-width: 100%; /* Cho phép chữ tràn viền thay vì bị bó hẹp */
-  }
-
-
-  .cs-logo {
-    margin: 0 auto 20px; /* Căn giữa logo Apple Creator Studio */
-  }
-
-
-  .cs-image-col {
-    justify-content: center; /* Căn giữa cụm hình ảnh icon */
-  }
-
-
-
-
-
-
-
-
-/* =========================================================
-   CREATOR STUDIO ADD-ON
-========================================================= */
-.creator-studio-section {
-  background-color: #000;
-  /* Nền đen nguyên khối theo thiết kế Apple */
-  padding: 80px 24px;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  background: #fff;
+  color: #1d1d1f;
+  -webkit-font-smoothing: antialiased;
 }
-
-
-.creator-studio-container {
-  max-width: 1068px;
-  /* Giữ cùng chiều rộng với các phần trên để thẳng hàng */
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-
-/* Cột chứa nội dung chữ */
-.cs-text-col {
-  flex: 1;
-  max-width: 480px;
-  /* Giới hạn độ rộng để chữ tự động xuống dòng giống ảnh mẫu */
-}
-
-
-/* Kích thước logo (đã được thu nhỏ) */
-.cs-logo {
-  height: 20px;
-  /* Giảm từ 28px xuống 20px để logo gọn gàng hơn */
-  width: auto;
-  display: block;
-  margin-bottom: 20px;
-}
-
-
-/* Kích thước cụm icon (đã được thu nhỏ) */
-.cs-icons-img {
-  max-width: 100%;
-  width: 380px;
-  /* Giảm từ 480px xuống 380px để cụm icon không bị lấn lướt chữ */
-  height: auto;
-  object-fit: contain;
-}
-
-
-/* Tiêu đề giá tiền */
-.cs-headline {
-  color: #fff;
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
-  margin-bottom: 20px;
-}
-
-
-/* Đoạn văn bản mô tả */
-.cs-desc {
-  color: #f5f5f7;
-  /* Màu trắng xám đặc trưng của Apple trên nền đen */
-  font-size: 17px;
-  line-height: 1.47;
-  font-weight: 400;
-  margin-bottom: 24px;
-}
-
-
-/* Nút link Tìm hiểu thêm */
-.cs-link {
-  color: #2997ff;
-  /* Màu xanh dương tối ưu cho chế độ nền tối */
-  font-size: 17px;
-  text-decoration: none;
-}
-
-
-.cs-link:hover {
-  text-decoration: underline;
-}
-
-
-/* Cột chứa ảnh icon */
-.cs-image-col {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  /* Đẩy ảnh sát về bên phải */
-}
-
-
-
-
-  /* 3. SỬA PHẦN SO SÁNH 4 IPAD */
-  /* Thay vì bóp méo 4 chiếc iPad vào 1 màn hình nhỏ, ta ép mỗi cột rộng ít nhất 220px và cho phép người dùng dùng tay vuốt ngang (cuộn ngang) */
-  .cards-row,
-  .compare-row {
-    grid-template-columns: repeat(4, minmax(220px, 1fr));
-    overflow-x: auto; /* Bật tính năng cuộn ngang */
-    -webkit-overflow-scrolling: touch; /* Giúp thao tác vuốt trên iPhone mượt mà hơn */
-    padding-bottom: 16px;
-  }
- 
-  /* Làm đẹp thanh cuộn ngang */
-  .cards-row::-webkit-scrollbar,
-  .compare-row::-webkit-scrollbar {
-    height: 4px;
-  }
- 
-  .cards-row::-webkit-scrollbar-thumb,
-  .compare-row::-webkit-scrollbar-thumb {
-    background-color: #d2d2d7;
-    border-radius: 10px;
-  }
- 
-  /* Căn lề lại bảng thông tin thu thập để không bị sát mép màn hình */
-  .section-form__inner {
-      padding: 0 16px;
-  }
-}
-
-
-
-
-
-
 
 
 /* =========================================================
@@ -326,7 +15,6 @@
   padding: 80px 24px 0;
 }
 
-
 .compare-section h2 {
   font-size: 40px;
   font-weight: 700;
@@ -335,7 +23,6 @@
   color: #1d1d1f;
   margin-bottom: 10px;
 }
-
 
 .compare-section .compare-link {
   display: block;
@@ -346,11 +33,9 @@
   margin-bottom: 60px;
 }
 
-
 .compare-section .compare-link:hover {
   text-decoration: underline;
 }
-
 
 /* ---- Cards row ---- */
 .cards-row {
@@ -361,7 +46,6 @@
   padding-bottom: 32px;
 }
 
-
 .card {
   display: flex;
   flex-direction: column;
@@ -369,7 +53,6 @@
   padding: 0 12px;
   position: relative;
 }
-
 
 .card-img {
   width: 100%;
@@ -379,14 +62,12 @@
   margin-bottom: 20px;
 }
 
-
 /* Color dots */
 .color-dots {
   display: flex;
   gap: 6px;
   margin-bottom: 12px;
 }
-
 
 .dot {
   width: 10px;
@@ -395,11 +76,9 @@
   border: 1.5px solid rgba(0, 0, 0, .15);
 }
 
-
 .dot.active {
   border-color: #1d1d1f;
 }
-
 
 .badge-new {
   font-size: 13px;
@@ -409,7 +88,6 @@
   min-height: 18px;
 }
 
-
 .card-name {
   font-size: 24px;
   font-weight: 700;
@@ -418,7 +96,6 @@
   text-align: center;
 }
 
-
 .card-desc {
   font-size: 14px;
   color: #1d1d1f;
@@ -426,7 +103,6 @@
   line-height: 1.5;
   min-height: 60px;
 }
-
 
 .card-btn {
   display: inline-block;
@@ -442,11 +118,9 @@
   transition: background .2s;
 }
 
-
 .card-btn:hover {
   background: #0077ed;
 }
-
 
 .card-btn-ghost {
   background: transparent;
@@ -454,11 +128,9 @@
   border: 1.5px solid #0071e3;
 }
 
-
 .card-btn-ghost:hover {
   background: #f5f5f7;
 }
-
 
 /* =========================================================
    COMPARISON TABLE
@@ -469,7 +141,6 @@
   padding: 0 24px;
 }
 
-
 .compare-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -477,11 +148,9 @@
   min-height: 68px;
 }
 
-
 .compare-row:last-child {
   border-bottom: none;
 }
-
 
 .cell {
   display: flex;
@@ -496,13 +165,11 @@
   gap: 2px;
 }
 
-
 .cell.price {
   font-size: 15px;
   color: #1d1d1f;
   font-weight: 400;
 }
-
 
 .cell strong {
   font-size: 15px;
@@ -511,20 +178,17 @@
   margin-bottom: 2px;
 }
 
-
 .cell .dash {
   color: #6e6e73;
   font-size: 18px;
   line-height: 1;
 }
 
-
 .check-icon {
   width: 20px;
   height: 20px;
   display: inline-block;
 }
-
 
 /* Chip badges */
 .chip-badge {
@@ -540,11 +204,9 @@
   margin-bottom: 4px;
 }
 
-
 .chip-badge.m5 {
   font-size: 16px;
 }
-
 
 /* Apple Intelligence icon */
 .ai-icon {
@@ -553,14 +215,12 @@
   margin-bottom: 4px;
 }
 
-
 /* Accessory icons */
 .acc-icon {
   width: 36px;
   height: 36px;
   margin-bottom: 4px;
 }
-
 
 /* =========================================================
    FAQ / Q&A Section
@@ -572,7 +232,6 @@
   border-top: 1px solid #d2d2d7;
 }
 
-
 .faq-header {
   display: flex;
   align-items: center;
@@ -580,13 +239,11 @@
   margin-bottom: 0;
 }
 
-
 .faq-header h2 {
   font-size: 28px;
   font-weight: 700;
   color: #1d1d1f;
 }
-
 
 .faq-toggle-all {
   background: none;
@@ -599,26 +256,21 @@
   justify-content: center;
 }
 
-
 .faq-toggle-all svg {
   transition: transform .3s;
 }
-
 
 .faq-toggle-all.open svg {
   transform: rotate(180deg);
 }
 
-
 .faq-list {
   margin-top: 0;
 }
 
-
 .faq-item {
   border-top: 1px solid #d2d2d7;
 }
-
 
 .faq-question {
   width: 100%;
@@ -637,11 +289,9 @@
   gap: 16px;
 }
 
-
 .faq-question:hover {
   color: #0071e3;
 }
-
 
 .faq-chevron {
   flex-shrink: 0;
@@ -649,13 +299,9 @@
   color: #1d1d1f;
 }
 
-
-/* Hiệu ứng xoay mũi tên khi thẻ chứa nó hoặc chính nó được thêm class 'open' */
-.faq-item.open .faq-chevron,
-.faq-question.open .faq-chevron {
+.faq-item.open .faq-chevron {
   transform: rotate(180deg);
 }
-
 
 .faq-answer {
   overflow: hidden;
@@ -663,11 +309,9 @@
   transition: max-height .4s ease, padding .3s;
 }
 
-
 .faq-item.open .faq-answer {
   max-height: 400px;
 }
-
 
 .faq-answer-inner {
   font-size: 15px;
@@ -676,50 +320,94 @@
   padding-bottom: 24px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-/* ---- Hiệu ứng xoay mũi tên lớn và nhỏ ---- */
-.faq-toggle-all svg {
-  transition: transform 0.3s ease;
+/* Footer note */
+.footer-note {
+  max-width: 1068px;
+  margin: 0 auto;
+  padding: 20px 24px 40px;
+  border-top: 1px solid #d2d2d7;
+  font-size: 12px;
+  color: #6e6e73;
+  line-height: 1.6;
 }
-.faq-toggle-all.open svg {
-  transform: rotate(180deg);
+
+.footer-note p {
+  margin-bottom: 8px;
 }
 
 
+/* =========================================================
+   CREATOR STUDIO ADD-ON
+========================================================= */
+.creator-studio-section {
+  background-color: #000;
+  padding: 80px 24px;
+}
 
+.creator-studio-container {
+  max-width: 1068px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
 
+.cs-text-col {
+  flex: 1;
+  max-width: 480px;
+}
 
+.cs-logo {
+  height: 20px;
+  width: auto;
+  display: block;
+  margin-bottom: 20px;
+}
 
-.faq-item.open .faq-chevron,
-.faq-question.open .faq-chevron {
-  transform: rotate(180deg);
+.cs-icons-img {
+  max-width: 100%;
+  width: 380px;
+  height: auto;
+  object-fit: contain;
 }
 
 
-/* ---- Hiệu ứng gập/mở cho toàn bộ danh sách câu hỏi ---- */
-.faq-list {
-  overflow: hidden;
-  max-height: 2000px; /* Đặt một con số đủ lớn để chứa hết các câu hỏi */
-  opacity: 1;
-  transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in-out;
+.cs-headline {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
 }
 
 
-.faq-list.collapsed {
-  max-height: 0;
-  opacity: 0;
-  margin-top: 0;
+.cs-desc {
+  color: #f5f5f7;
+  font-size: 17px;
+  line-height: 1.47;
+  font-weight: 400;
+  margin-bottom: 24px;
 }
+
+.cs-link {
+  color: #2997ff;
+
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.cs-link:hover {
+  text-decoration: underline;
+}
+
+.cs-image-col {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
 
 /*=====================
 STICKY BAR
