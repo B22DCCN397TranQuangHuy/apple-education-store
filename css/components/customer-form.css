@@ -140,6 +140,12 @@
     display: block;
 }
 
+@media (max-width: 600px) {
+    .form-error-message {
+        align-self: flex-start;
+    }
+}
+
 /* ---- Submit button ---- */
 .form-submit-btn {
     margin-top: 1rem;
